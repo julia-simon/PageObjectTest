@@ -1,9 +1,12 @@
-package com.demoqa.Tests;
+package com.demoqa.tests;
 
+import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
 
 public class TestFormWithPageObjectsTests extends TestBase {
+
+    RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
     void succesfullFillFormTests() {
@@ -23,8 +26,8 @@ public class TestFormWithPageObjectsTests extends TestBase {
                 .setCity("Noida")
                 .clickSubmit();
 
-       registrationPage.verifyRegistrationResultModalAppears()
-               .verifyResult("Student Name", "Chandler Bing")
+        registrationPage.verifyRegistrationResultModalAppears()
+                .verifyResult("Student Name", "Chandler Bing")
                 .verifyResult("Student Email", "bing@gmail.com")
                 .verifyResult("Gender", "Male")
                 .verifyResult("Mobile", "8880000097")
@@ -35,4 +38,4 @@ public class TestFormWithPageObjectsTests extends TestBase {
                 .verifyResult("Address", "My address")
                 .verifyResult("State and City", "NCR Noida");
     }
-    }
+}

@@ -1,8 +1,8 @@
-package com.demoqa.Pages;
+package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.demoqa.Pages.Components.CalendarComponent;
-import com.demoqa.Pages.Components.ResultsModal;
+import com.demoqa.pages.components.CalendarComponent;
+import com.demoqa.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -93,7 +93,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage uploadPicture (String value){
+    public RegistrationPage uploadPicture(String value) {
         pictureInput.uploadFromClasspath(value);
 
         return this;
@@ -119,7 +119,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage clickSubmit () {
+    public RegistrationPage clickSubmit() {
         submitButton.click();
 
         return this;
@@ -136,6 +136,4 @@ public class RegistrationPage {
 
         return this;
     }
-
-
 }

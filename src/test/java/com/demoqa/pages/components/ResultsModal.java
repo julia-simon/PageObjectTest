@@ -1,4 +1,4 @@
-package com.demoqa.Pages.Components;
+package com.demoqa.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -10,8 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class ResultsModal {
     // Selenide elements / locator / etc
     SelenideElement modalDialog = $(".modal-dialog"),
-                    headerModal = $("#example-modal-sizes-title-lg"),
-                    tableResult = $(".table-responsive");
+            headerModal = $("#example-modal-sizes-title-lg"),
+            tableResult = $(".table-responsive");
 
 
     // Actions
