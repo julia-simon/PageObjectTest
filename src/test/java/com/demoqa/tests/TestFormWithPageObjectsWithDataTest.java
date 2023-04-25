@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static com.demoqa.tests.TestData.*;
 
 
-public class TestFormWithPageObjectsTests extends TestBase {
+public class TestFormWithPageObjectsWithDataTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
