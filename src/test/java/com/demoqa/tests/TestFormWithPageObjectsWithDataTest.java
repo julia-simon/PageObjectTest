@@ -2,6 +2,7 @@ package com.demoqa.tests;
 
 import com.demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.demoqa.tests.TestData.*;
@@ -13,6 +14,7 @@ public class TestFormWithPageObjectsWithDataTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Tag("simple")
     @DisplayName("Successful registration")
     void succesfullFillFormTests() {
         step("Open form", () -> {
