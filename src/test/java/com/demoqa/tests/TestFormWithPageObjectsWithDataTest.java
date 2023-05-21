@@ -14,7 +14,7 @@ public class TestFormWithPageObjectsWithDataTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-    @Tag("simple")
+    @Tag("remote")
     @DisplayName("Successful registration")
     void succesfullFillFormTests() {
         step("Open form", () -> {
