@@ -7,12 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import static com.demoqa.tests.TestData.*;
 import static io.qameta.allure.Allure.step;
-
-
 public class TestFormWithPageObjectsWithDataTest extends TestBase {
-
     RegistrationPage registrationPage = new RegistrationPage();
-
     @Test
     @Tag("remote")
     @DisplayName("Successful registration")
@@ -22,20 +18,20 @@ public class TestFormWithPageObjectsWithDataTest extends TestBase {
                     .removeFooter();
         });
         step("Fill form", () -> {
-                    registrationPage.setFirstName(firstName)
-                            .setLastName(lastName)
-                            .setEmail(email)
-                            .setGender(genderUser)
-                            .setMobileNumber(mobileNumber)
-                            .setBirthDate(day, month, year)
-                            .setSubject(subjects)
-                            .setHobby(hobbies)
-                            .uploadPicture(picture)
-                            .setCurrentAddress(currentAddress)
-                            .setState(state)
-                            .setCity(city)
-                            .clickSubmit();
-                });
+            registrationPage.setFirstName(firstName)
+                    .setLastName(lastName)
+                    .setEmail(email)
+                    .setGender(genderUser)
+                    .setMobileNumber(mobileNumber)
+                    .setBirthDate(day, month, year)
+                    .setSubject(subjects)
+                    .setHobby(hobbies)
+                    .uploadPicture(picture)
+                    .setCurrentAddress(currentAddress)
+                    .setState(state)
+                    .setCity(city)
+                    .clickSubmit();
+        });
         step("Verify results", () -> {
             registrationPage.verifyRegistrationResultModalAppears()
                     .verifyResult("Student Name", firstName + " " + lastName)
