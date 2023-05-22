@@ -6,6 +6,8 @@
 *gradlew.bat
 ### VS Code ###
 .vscode/
+/gradle
+/wrapper
 
 ### Mac OS ###
 .DS_Store

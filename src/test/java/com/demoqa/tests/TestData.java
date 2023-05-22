@@ -29,11 +29,9 @@ public class TestData {
                 varCity = faker.options().option("Delhi", "Gurgaon", "Noida");
                 return varCity;
 
-
             case "Uttar Pradesh":
                 varCity = faker.options().option("Agra", "Lucknow", "Merrut");
                 return varCity;
-
 
             case "Haryana":
                 varCity = faker.options().option("Karnal", "Panipat");
@@ -42,7 +40,6 @@ public class TestData {
             case "Rajasthan":
                 varCity = faker.options().option("Jaipur", "Jaiselmer");
                 return varCity;
-
 
             default:
                 return "";
