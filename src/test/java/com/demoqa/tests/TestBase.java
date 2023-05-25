@@ -13,13 +13,16 @@ import java.util.Map;
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        String[] browser = System.getProperty("browser").split(":");
+        Configuration.browser = browser[0];
+        Configuration.browserVersion = browser[1];
         //Configuration.browser = "Chrome";
         //Configuration.timeout = 5000;
         //Configuration.holdBrowserOpen = true;
         Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
