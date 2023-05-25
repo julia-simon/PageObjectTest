@@ -15,9 +15,9 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        String[] browser = System.getProperty("browser").split(":");
-        Configuration.browser = browser[0];
-        Configuration.browserVersion = browser[1];
+        String[] browserAndVersion = System.getProperty("browser", "chrome:100.0").split(":");
+        Configuration.browser = browserAndVersion[0];
+        Configuration.browserVersion = browserAndVersion[1];
         //Configuration.browser = "Chrome";
         //Configuration.timeout = 5000;
         //Configuration.holdBrowserOpen = true;
