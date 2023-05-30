@@ -2,7 +2,7 @@
   "base": {
     "project": "qa guru notifications",
     "environment": "some env",
-    "comment": "some comment",
+    "comment": "done",
     "reportLink": "",
     "language": "ru",
     "messenger": "telegram",
